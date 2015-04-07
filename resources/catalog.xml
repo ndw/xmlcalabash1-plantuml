@@ -1,0 +1,4 @@
+<catalog xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog">
+  <uri name="http://xmlcalabash.com/extension/steps/plantuml.xpl"
+       uri="jar:file:lib/xmlcalabash1-plantuml-VERSION.jar!/library.xpl"/>
+</catalog>
