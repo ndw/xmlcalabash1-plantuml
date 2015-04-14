@@ -6,7 +6,7 @@
    <p:input port="source"/>
    <p:output port="result"/>
    <p:option name="format" select="'png'" cx:type="png|svg"/>
-   <p:option name="html" select="false()" cx:type="xsd:boolean"/>
+   <p:option name="html" select="false()"/>
 </p:declare-step>
 
 </p:library>
