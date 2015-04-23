@@ -5,7 +5,7 @@
                 exclude-inline-prefixes="c cx">
 <p:output port="result"/>
 
-<p:import href="../../../resources/library.xpl"/>
+<p:import href="http://xmlcalabash.com/extension/steps/plantuml.xpl"/>
 
 <cx:plantuml>
   <p:input port="source">
