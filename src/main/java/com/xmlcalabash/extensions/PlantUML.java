@@ -51,6 +51,7 @@ public class PlantUML extends DefaultStep {
     private static final QName _src = new QName("", "src");
 
     private static final String library_xpl = "http://xmlcalabash.com/extension/steps/plantuml.xpl";
+    private static final String library_url = "/com/xmlcalabash/extensions/plantuml/library.xpl";
 
     private ReadablePipe source = null;
     private WritablePipe result = null;
@@ -153,14 +154,14 @@ public class PlantUML extends DefaultStep {
                 URI baseURI = new URI(base);
                 URI xpl = baseURI.resolve(href);
                 if (library_xpl.equals(xpl.toASCIIString())) {
-                    URL url = PlantUML.class.getResource("/library.xpl");
+                    URL url = PlantUML.class.getResource(library_url);
                     logger.debug("Reading library.xpl for cx:plantuml from " + url);
-                    InputStream s = PlantUML.class.getResourceAsStream("/library.xpl");
+                    InputStream s = PlantUML.class.getResourceAsStream(library_url);
                     if (s != null) {
                         SAXSource source = new SAXSource(new InputSource(s));
                         return source;
                     } else {
-                        logger.info("Failed to read library.xpl for cx:plantuml");
+                        logger.info("Failed to read " + library_url + " for cx:plantuml");
                     }
                 }
             } catch (URISyntaxException e) {
