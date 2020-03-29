@@ -1,15 +1,17 @@
 language: java
-script: gradle dist
+
+script: "./gradlew dist"
+
 install:
-- echo sonatypeUsername=none >> gradle.properties
-- echo sonatypePassword=none >> gradle.properties
+  - echo sonatypeUsername=none >> gradle.properties
+  - echo sonatypePassword=none >> gradle.properties
+
 deploy:
   provider: releases
   api_key:
-    secure: NgMUw5byMmv6Ucv5KhnMEOunCIk/1vga/XSpweYH3muTU4zKIAZLztgvI2GAMouP8iWrVL/wgfxSeEunAqhVGp/zgabyW0ZM0Bkv8b/WYunoJuDsEYVBHzbq3Baudv2Tin9fCjaDmQEgoPe/y1zoiOpQYuMunTV/xAAwVLuLOxw=
+    secure: KuOMpJsUkg2J2BaXFJo45Bk53OrVNQBxjCgMfXVqHA9swiasqjxpkHX07yXGFLKo6UebRgnZgCSBXxUi8eczyRvDnAuQI2gAhgjPyhxW6wz9OQbSOP80vLByLF8Hd4xQspOfJz0KeGttpUfG5J44UEPd/4Bdq0u7VR70YKAYQWg=
   file:
     - build/distributions/xmlcalabash1-plantuml-$TRAVIS_TAG.zip
   on:
     tags: true
     all_branches: true
-
