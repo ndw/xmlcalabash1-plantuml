@@ -56,9 +56,6 @@ public class PlantUML extends DefaultStep {
     private ReadablePipe source = null;
     private WritablePipe result = null;
 
-    /**
-     * Creates a new instance of Identity
-     */
     public PlantUML(XProcRuntime runtime, XAtomicStep step) {
         super(runtime, step);
     }
